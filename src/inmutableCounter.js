@@ -20,12 +20,13 @@ const addCounter = (list) => {
 * @param {*R} list 
 */
 const removeCounter = (list, index) => {
-var internalArray
+var internalArray = [];
   for (var i = 0; i < list.length; i++) {
-    internalArray.push(list[i]);
+    var here = list[i];
+    internalArray.push(here);
   };
-  internalList.splice(index, 1);
-  list = internalList;
+  internalArray.splice(index, 1);
+  list = internalArray;
   return list;
 };
 
@@ -37,8 +38,13 @@ var internalArray
 const incrementCounter = (list, index) => {
   var internalValue = list[index];
   internalValue++;
-  list[index] = internalValue;
-  return list;             
+  var internalArray = [];
+  for (var i = 0; i < list.length; i++) {
+    var here = list[i];
+    internalArray.push(here);
+  };
+  internalArray[index] = internalValue;
+  return internalArray;             
 };
 
 
