@@ -3,7 +3,7 @@
 ## Steps.
 
 1.  clone the repository
-2.  in the console go to firstChallenge folder.
+2.  in the console go to **firstChallenge** folder.
 3.  execute
 ```
   npm install
@@ -11,7 +11,7 @@
 4.  Complete the next assets.
 
  -  src/counterReducers.js
- -  src/counter
+ -  src/counter.js
 
 ## NOTE.
 you can execute the next commands to test.
