@@ -10,6 +10,8 @@ var expect = require('expect');
  * @param {*} list 
  */
 const addCounter = (list) => {
+  var aux = [0];
+  list = aux;
   return list;
 };
 /*
@@ -17,6 +19,9 @@ const addCounter = (list) => {
 * @param {*R} list 
 */
 const removeCounter = (list, index) => {
+  var arr = list;
+  arr = arr.splice(index, 1);
+  list = arr;
   return list;
 };
 
@@ -26,6 +31,9 @@ const removeCounter = (list, index) => {
  * @param {*} index 
  */
 const incrementCounter = (list, index) => {
+  var arr = list;
+  arr[index] += 1;
+  list = arr;
   return list;             
 };
 
@@ -48,7 +56,7 @@ const testAddCounter = () => {
 const testRemoveCounter = () => {
   const listBefore = [0, 10, 20];
   const listAfter = [0,20];
-  
+
   deepFreeze(listBefore);
   expect(
     removeCounter(listBefore, 1)
