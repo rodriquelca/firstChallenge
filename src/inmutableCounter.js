@@ -10,14 +10,26 @@ var expect = require('expect');
  * @param {*} list 
  */
 const addCounter = (list) => {
-  return list;
+  var arr =  [];
+  for (var a=0; a<list.length;a++){
+    arr.push(list[a])
+  }
+  arr.push(list.length);
+  return arr;
 };
+
 /*
 * Removes a  counter from the list
 * @param {*R} list 
 */
 const removeCounter = (list, index) => {
-  return list;
+  var arr =  [];
+  for (var a=0; a<list.length;a++){
+      if(index != a){
+          arr.push(list[a])
+      }
+  }
+  return arr;
 };
 
 /**
@@ -26,7 +38,15 @@ const removeCounter = (list, index) => {
  * @param {*} index 
  */
 const incrementCounter = (list, index) => {
-  return list;             
+    var arr =  [];
+    for (var a=0; a<list.length;a++){
+        if(index == a){
+            arr.push(list[a]+1)
+        }else{
+            arr.push(list[a])
+        }
+    }
+    return arr;
 };
 
 

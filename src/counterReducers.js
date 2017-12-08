@@ -7,6 +7,16 @@ var expect = require('expect');
  * @param {*} action 
  */
 const counter = (state = 0, action) => {
+   switch(action.type){
+       case 'INCREMENT':
+           state++;
+          break;
+       case 'DECREMENT':
+           state--;
+           break;
+       default:
+          break;
+   }
    return state
 };
 
