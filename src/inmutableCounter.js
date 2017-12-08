@@ -1,16 +1,19 @@
-
+/**
+ * Inmutable methods must not change or modify the entry params; 
+ * @param {*} list 
+ */
 console.log('Star Wars Team, needs your help, the force require a soldiers counter manager');
 var deepFreeze = require('deep-freeze');
 var expect = require('expect');
 /**
- * Adds a  counter array
+ * Adds a  counter to the list
  * @param {*} list 
  */
 const addCounter = (list) => {
   return list;
 };
 /*
-* Removes a  counter array
+* Removes a  counter from the list
 * @param {*R} list 
 */
 const removeCounter = (list, index) => {
@@ -18,7 +21,7 @@ const removeCounter = (list, index) => {
 };
 
 /**
- * Increment the counter
+ * Increment the counter 
  * @param {*} list 
  * @param {*} index 
  */

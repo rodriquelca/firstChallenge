@@ -11,7 +11,7 @@
 4.  Complete the next assets.
 
  -  src/counterReducers.js
- -  src/counter.js
+ -  src/inmutableCounter.js
 
 ## NOTE.
 you can execute the next commands to test.

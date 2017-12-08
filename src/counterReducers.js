@@ -1,13 +1,14 @@
 var deepFreeze = require('deep-freeze');
 var expect = require('expect');
 /**
- * Counter reducer  method
+ * Counter reducer method
+ * the method will be made an operaction according the action param
  * @param {*} state 
  * @param {*} action 
  */
 const counter = (state = 0, action) => {
    return state
-}
+};
 
 //Unit Tests
 //state init in 0
