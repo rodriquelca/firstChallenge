@@ -17,7 +17,7 @@
 you can execute the next commands to test.
 ```
 node src/counterReducers.js
-node src/counter
+node src/counter.js
 ```
 
 Finally send a pull request.
