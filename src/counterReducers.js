@@ -3,10 +3,18 @@ var expect = require('expect');
 /**
  * Counter reducer method
  * the method will be made an operaction according the action param
- * @param {*} state 
- * @param {*} action 
+ * @param {*} state
+ * @param {*} action
  */
 const counter = (state = 0, action) => {
+   switch (action.type) {
+       case 'INCREMENT':
+           state = state + 1;
+          break;
+       case 'DECREMENT':
+           state = state - 1;
+          break;
+   }
    return state
 };
 
@@ -29,7 +37,7 @@ expect(
 expect(
     counter(1, {type: 'DECREMENT'})
 ).toEqual(0);
-// 
+//
 expect(
     counter(1, {type: 'SOMETING_ELSE'})
 ).toEqual(1);
