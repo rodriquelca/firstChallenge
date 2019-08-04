@@ -5,11 +5,14 @@
 console.log('Star Wars Team, needs your help, the force require a soldiers counter manager');
 var deepFreeze = require('deep-freeze');
 var expect = require('expect');
+var counterInt = 0 
 /**
  * Adds a  counter to the list
  * @param {*} list 
  */
 const addCounter = (list) => {
+  var internalList = [0];
+  list = internalList;
   return list;
 };
 /*
@@ -17,6 +20,13 @@ const addCounter = (list) => {
 * @param {*R} list 
 */
 const removeCounter = (list, index) => {
+var internalArray = [];
+  for (var i = 0; i < list.length; i++) {
+    var here = list[i];
+    internalArray.push(here);
+  };
+  internalArray.splice(index, 1);
+  list = internalArray;
   return list;
 };
 
@@ -26,7 +36,15 @@ const removeCounter = (list, index) => {
  * @param {*} index 
  */
 const incrementCounter = (list, index) => {
-  return list;             
+  var internalValue = list[index];
+  internalValue++;
+  var internalArray = [];
+  for (var i = 0; i < list.length; i++) {
+    var here = list[i];
+    internalArray.push(here);
+  };
+  internalArray[index] = internalValue;
+  return internalArray;             
 };
 
 
